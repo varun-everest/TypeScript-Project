@@ -34,3 +34,5 @@ interface Item {  //One way of defining the type of an item
 
 //Task -----> difference between type and interface!!!
 //create a student object with properties id, name , interested_courses
+
+//enums and generics, tsconfig.json, modules, import and export
