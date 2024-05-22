@@ -1,5 +1,5 @@
 export function getLastItem<Type> (allItems : Type[]) : Type {
-    return allItems[-1];
+    return allItems[allItems.length - 1];
 }
 
 export type myType<T1, T2> = {

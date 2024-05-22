@@ -115,3 +115,4 @@ let newVariable : myType<string, number> = {
     value1 : "Sample one",
     value2 : 100
 }
+console.log(newVariable);
