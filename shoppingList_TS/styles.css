@@ -1,0 +1,82 @@
+body {
+    font-family: Arial, sans-serif;
+    margin : 10px;
+    padding : 5px;
+    background-color: #ffffff;
+}
+
+.card {
+    display : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(117, 102, 128);
+    /* background:linear-gradient(to right,#00416a, #e4e5e6); */
+    border-radius: 20px;
+    padding : 20px;
+    
+}
+
+h1{
+  color : rgb(194, 182, 51);
+  text-shadow: rgb(45, 16, 2);
+}
+
+#text-box {
+  width : 80%;
+  height : 40px;
+  border : 2px solid gray;
+  border-radius: 10px;
+  text-align: center;
+}
+
+li{
+  margin-top:3px;
+}
+
+
+.shop-item-selected {
+  text-decoration: line-through;
+  color : white;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#item-list {
+  padding : 20px;
+  width:80%;
+}
+.shop-item { 
+  color : #306587;
+  text-align : center;
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  
+}
+.list-item {
+  display : flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border : 2px solid gray;
+  
+  background-color: white;
+  
+  height : 20px;
+  padding : 10px;
+  border-radius: 10px;
+}
+
+.dlt-button {
+  text-align: right;
+  color : red;
+  cursor: pointer;
+}
+
+.done {
+  background-color : lightgreen;
+}
+
+.gen {
+  color : orange;
+  font-style: italic;
+  text-decoration: solid;
+}
