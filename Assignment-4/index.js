@@ -55,28 +55,45 @@ var intern3 = {
     empLead: emp3
 };
 var allEmp = [cto, emp1, emp2, emp3, intern1, intern2, intern3];
-var empLeadArray = [];
-function findLeads(allEmp) {
-    allEmp.forEach(function (element) {
-        if (element.empLead && !element.empLead.isLead) {
-            element.empLead.isLead = true;
-            empLeadArray.push(element.empLead.empId);
-        }
-    });
-}
+// const empLeadArray: number[] = [];
+// function findLeads(allEmp: Employee[]): void {
+//     allEmp.forEach(element => {
+//         if(element.empLead && !element.empLead.isLead){
+//             element.empLead.isLead = true;
+//             empLeadArray.push(element.empLead.empId);
+//         }
+//     });
+// }
+// function checkLead(emp: Employee) : boolean {
+//     //let isLead : boolean = false;
+//     // empLeadArray.forEach(id => {
+//     //     if(emp.empId === id) {
+//     //         isLead = true;
+//     //     }
+//     // });
+//     for(let i=0 ; i<empLeadArray.length ; i++) {
+//         if(empLeadArray[i]=== emp.empId){
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+// function printEmployee(allEmp : Employee[]) : void {
+//     allEmp.forEach(emp => {
+//         if(checkLead(emp)) {
+//             console.log(`${emp.empName} is Lead`);
+//         }
+//         else {
+//             console.log(`${emp.empName} is not Lead`);
+//         }
+//     });
+// }
+// findLeads(allEmp);
+// console.log(empLeadArray);
+// printEmployee(allEmp);
 function checkLead(emp) {
-    //let isLead : boolean = false;
-    // empLeadArray.forEach(id => {
-    //     if(emp.empId === id) {
-    //         isLead = true;
-    //     }
-    // });
-    for (var i = 0; i < empLeadArray.length; i++) {
-        if (empLeadArray[i] === emp.empId) {
-            return true;
-        }
-    }
-    return false;
+    // Use array.some to check if any employee in allEmp has this employee as their empLead
+    return allEmp.some(function (lead) { return lead.empLead === emp; });
 }
 function printEmployee(allEmp) {
     allEmp.forEach(function (emp) {
@@ -88,6 +105,4 @@ function printEmployee(allEmp) {
         }
     });
 }
-findLeads(allEmp);
-console.log(empLeadArray);
 printEmployee(allEmp);

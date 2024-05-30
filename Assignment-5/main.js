@@ -1,36 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var utils_1 = require("./utils");
 function printByConcatenatingProperties(item) {
     var details = "";
     for (var key in item) {
         var k = key;
         //console.log(k);
-        if (typeof item[k] === "string") {
+        if (typeof item[k] === "string") { //It only prints whose values are of string type....
             details += String(k) + ": ".concat(item[k], ", ");
         }
     }
     details = details.slice(0, details.length - 2);
     console.log(details);
 }
-var Util;
-(function (Util) {
-    function concatAllProperties(item) {
-        var allDetails = '';
-        function concat(ele) {
-            for (var property in ele) {
-                var value = ele[property];
-                if (typeof value === 'object') {
-                    concat(value);
-                }
-                else {
-                    allDetails += "".concat(property, " : ").concat(value, ", ");
-                }
-            }
-        }
-        concat(item);
-        allDetails = allDetails.slice(0, allDetails.length - 2);
-        return allDetails;
-    }
-    Util.concatAllProperties = concatAllProperties;
-})(Util || (Util = {}));
 var person1 = {
     name: "Varun",
     email: "varunmartha@gmail.com",
@@ -49,4 +31,4 @@ var person2 = {
     }
 };
 printByConcatenatingProperties(person2);
-console.log(Util.concatAllProperties(person2));
+console.log(utils_1.Util.concatAllProperties(person2));

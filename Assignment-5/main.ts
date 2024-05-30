@@ -1,3 +1,5 @@
+import { Util } from "./utils"
+
 type Address = {
     city ?: string;
     state ?: string;
@@ -31,32 +33,7 @@ function printByConcatenatingProperties<Type> (item: Type): void {
     details = details.slice(0, details.length-2);
     console.log(details);
 }
-
-namespace Util {
-
-    export function concatAllProperties(item : {[property: string]: any}) : string {
-
-        let allDetails = '';
-        
-        function concat(ele : {[property: string] : any}): void {
             
-            for(const property in ele) {
-                let value = ele[property];
-
-                if(typeof value === 'object') {
-                    concat(value);
-                }
-                else {
-                    allDetails += `${property} : ${value}, ` 
-                }
-            }
-        }
-        concat(item);
-        allDetails = allDetails.slice(0, allDetails.length - 2);
-        return allDetails;
-    }
-}
-
 
 let person1 : Person = {
     name: "Varun",
