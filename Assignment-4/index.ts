@@ -140,7 +140,6 @@ let allEmp: Employee[] = [cto, emp1, emp2, emp3, intern1, intern2, intern3];
 
 
 function checkLead(emp: Employee): boolean {
-  // Use array.some to check if any employee in allEmp has this employee as their empLead
   return allEmp.some((lead) => lead.empLead === emp);
 }
 
